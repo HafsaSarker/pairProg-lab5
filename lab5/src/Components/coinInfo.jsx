@@ -15,7 +15,9 @@ const CoinInfo = ({ image, name, symbol }) => {
     const json = await response.json();
     setPrice(json);
   }
+
   const [price, setPrice] = useState(null);
+  
   return (
     <div>
       {price ? ( // rendering only if API call actually returned us data
